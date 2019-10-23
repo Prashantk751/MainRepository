@@ -1,0 +1,85 @@
+body{
+	font-family:arial;
+	font-size:15px;
+	line-height:1.6em;
+	background-color:lightblue;
+}
+
+li {
+	list-style:none;
+}
+
+a{
+	text-decoration:none;
+}
+
+label{
+	width:180px;
+	display:inline-block;
+}
+
+input[type='text'] {
+	
+	width:97%;
+	padding:4px;
+	border:1px solid #ccc;
+	border-radius:5px;
+}
+
+input[type='number']
+{
+	width:50px;
+	padding:4px;
+	border:1px solid #ccc;
+	border-radius:5px;
+}
+
+.container {
+	width:60%;
+	margin:0 auto;
+	overflow:auto;
+}
+
+header {
+	border-bottom:3px solid #f4f4f4;
+}
+
+main {
+	margin-bottom:20px;
+	
+}
+
+footer {
+	border-top:3px solid #f4f4f4;
+	padding-top:10px;
+	text-align:center;
+	
+}
+
+.start {
+	display:inline-block;
+	padding:5px;
+	color:#666;
+	background-color:#f4f4f4;
+	border:1px solid #ccc;
+	
+}
+
+.current{
+	overflow:auto;
+	margin-top:25px;
+	padding:7px 0px 7px 10px;
+	color:#666;
+	background-color:#f4f4f4;
+	border:1px solid #ccc;
+}
+
+@media only screen and (max-width:960px)
+{
+	.container{
+		width:80%;
+	}
+}
+
+
+<!--================================= Register Style =====================================-->
