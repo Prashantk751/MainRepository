@@ -1,0 +1,38 @@
+body{
+	
+	background-image:url("images/features/img3.png");
+	background-size:cover;
+	background-repeat:no-repeat;
+	opacity: 1;
+	display: block;
+	width: 100%;
+	height: auto;
+	
+}
+
+.mar {	
+	
+	margin:120px auto;
+	
+}
+
+.box {
+	background-image:url("../images/features/img3.png");
+	border:2px solid white;
+	border-radius: 10px;
+	
+	padding:50px;
+	padding-bottom: 80px;
+	opacity: 0.7;
+	transition: input 0.5s ease;
+	
+}
+
+.box form >input:focus{
+
+	opacity: 1;
+}
+
+.box .btn {
+	margin-right: 10px;
+}

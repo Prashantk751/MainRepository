@@ -1,0 +1,289 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+}
+
+.useremail {
+	color:#666699;
+	font-size:20px;
+	
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  position:absolute;
+  top:20%;
+  left:7%;
+  opacity:.7;
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 26rem;
+  background-color: #777;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+
+/* Banner Caption */
+
+.ban{
+	background-color:#eb4800;
+	color:#fff;
+	padding:2px 7px;
+	font-size:30px;
+	text-transform:uppercase;
+	float:left;
+	width:auto;
+}
+
+.under{
+	width:100%;
+	margin-bottom:2px;
+	text-align:left;
+	font-size:30px;
+	font-weight:700;
+	float:left;
+}
+
+/* product box
+----------------------------------------------------------------------------- */
+.product-box{
+	text-align:center;
+	padding-bottom:15px;
+	position: relative;
+	background-color:#f8f8f8;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-bottom:1px solid #eee;
+	margin:10px;
+}
+
+.product-box:hover{
+	background-color:#eb4800;
+	-webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+	box-shadow: 0px 0px 5px #ccc;
+}
+.product-box:hover a{
+	color:#fff !important;
+}
+.product-box img{
+	padding-top:20px;
+	overflow:hidden;
+	width:80%;
+}
+.product-box a.title{
+	text-transform:uppercase;
+	color:#111111;
+	display:inline-block;
+	font-weight:bold;
+	font-size:11px;
+	margin:15px 0 0px 0;
+}
+.product-box a.category{
+	color:#eb4800;
+}
+.product-box p.price{
+	font-size:20px;
+	font-weight:300;
+	padding:10px 0;
+}
+/* end product box */
+
+
+/* feature box
+----------------------------------------------------------------------------- */
+.feature_box{
+	margin-bottom:20px;	
+}
+.feature_box h4{
+	margin:0 0 10px 0;
+	font-weight:normal;	
+}
+.feature_box img{	
+	margin-bottom:10px;
+	background-color:#eb4800;
+	padding:25px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;	
+	border-radius: 50%;
+}
+.feature_box .service{	
+	margin-top:3px;
+	padding:3px;	
+	text-align:center;
+}
+.feature_box .service:hover{
+	background-color:#f4f4f4;
+}
+.feature_box .service:hover img{
+	-webkit-transition: all 0.7s linear;
+	-webkit-transform: rotate(6.28rad);
+	transition: all 0.7s;
+	transform: rorate(6.28rad);
+}
+.feature_box .service div{	
+	padding:5px 5px 0 5px;
+}
+/* end feature box */
+
+
+/* our clients
+----------------------------------------------------------------------------- */
+section.clients{
+	margin-top:20px;
+}
+section.clients .row{
+	text-align:center;
+}
+/* end our clients */
+
+
+/* footer 
+----------------------------------------------------------------------------- */
+section#footer-bar,
+section#copyright{
+	padding:10px 10px;
+}
+section#footer-bar{
+	margin-top:20px;
+	padding-top:10px;
+	background-color:#242424;
+	border-top:1px solid #ddd;
+	color:#777;
+}
+section#footer-bar .post {
+	overflow:hidden;
+	margin: 0 0 0px 0;
+	border-bottom:1px dotted #333;
+	border-top:1px dotted #000;
+	padding:5px 0;
+}
+section#footer-bar .post span{
+	font-size:10px;
+}
+section#footer-bar .posts .post:first-child{
+	border-top:0;
+}
+section#footer-bar .posts .post:last-child{
+	border-bottom:0;
+}
+section#footer-bar p.logo{
+	margin-top:10px;
+	width:120px;
+}
+section#footer-bar a{
+	text-indent:15px;
+	color:#fff;
+}
+section#footer-bar  a:hover{
+	color:#999;
+	text-decoration:underline;	
+}
+
+section#footer-bar h4 {
+	padding: 0;
+	font-size: 16px;
+	color: #fff;
+	font-weight:normal;
+	margin: 10px 0 18px;	
+}
+section#footer-bar .social_icons a {
+	display: block;
+	float: left;
+	width: 29px;
+	height: 28px;
+	text-indent: -9999px;
+	background-repeat: no-repeat;
+	margin-right: 10px;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+section#copyright{
+	background-color:#111111;
+	color:#fff;
+	font-size:10px;
+	text-transform:uppercase;	
+}
+/* end footer *
+
+/*=====================================cart style====================================*/
+.cart-box {
+	
+	padding:10px 00px;
+	border-bottom:1px solid #eee; 
+	border-top:1px solid #eee;
+	margin-top:20px;
+}
+
+.total-price-box{
+	
+	 border-bottom:1px solid #eee;
+	 padding-bottom:20px;
+}
+
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
