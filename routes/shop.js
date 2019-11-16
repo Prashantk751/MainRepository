@@ -3,7 +3,7 @@ const path = require('path');
 
 const router = express.Router();
 
-const prod = require('../controllers/product');
+const prod = require('../controllers/products');
 router.get('/', prod.getProducts);
 
 
