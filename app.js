@@ -13,8 +13,8 @@ app.engine('handlebars',expresshbs({layoutsDir: 'views/layouts/', defaultLayout:
 app.set('view engine', 'handlebars');//specifyying the default work engine
 app.set('views','views')//specifying the path to the folder which will contain all template files
 //using body-parser module to extract data from the incoming request
-app.use(bodyParser.urlencoded());
-
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(express.static(path.join(__dirname,'public')));
 app.use(adminRoutes);
 
 //if this root path is at the top you can never reach the other routes because it will get you to the root path
