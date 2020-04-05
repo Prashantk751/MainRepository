@@ -11,6 +11,7 @@ const multer = require('multer');
 const expresshbs = require('express-handlebars');
 const app = express();
 const errorController = require('./controllers/error');
+const handlebars = require('handlebars');
 
 const fileStorage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -48,6 +49,14 @@ app.use(downloadRoutes);
 app.use('/upload',(req,res,next)=>{
     res.render('upload');
 })
+
+handlebars.registerHelper('ifCond', function(v1, v2, options) {
+    if(v1 === v2) {
+      return options.fn(this);
+    }
+    return options.inverse(this);
+  });
+
 app.use(uploadRoutes);
 //if this root path is at the top you can never reach the other routes because it will get you to the root path
 //that is why its a good practice to use it at the last

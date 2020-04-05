@@ -13,8 +13,13 @@
     <header class="main-header">
         <nav class="main-header__nav">
             <ul class="main-header__item-list">
-                <li class="main-header__item"><a class="active" href="/">Shop</a></li>
-                <li class="main-header__item"><a href="/add-product">Add Product</a></li>
+                <li class="main-header__item"><a {{#ifCond path '/'}} class="active" {{else}} class="" {{/ifCond}} href="/">Shop</a></li>
+                <li class="main-header__item"><a {{#ifCond path '/products'}} class="active" {{else}} class="" {{/ifCond}} href="/products">Products</a></li>
+                <li class="main-header__item"><a {{#ifCond path '/cart'}} class="active" {{else}} class="" {{/ifCond}} href="/cart">Cart</a></li>
+                <li class="main-header__item"><a {{#ifCond path '/orders'}} class="active" {{else}} class="" {{/ifCond}} href="/orders">Orders</a></li>
+                
+                <li class="main-header__item"><a {{#ifCond path '/admin/add-product'}} class="active" {{else}} class="" {{/ifCond}} href="/admin/add-product">Add Product</a></li>
+                <li class="main-header__item"><a {{#ifCond path '/admin/products'}} class="active" {{else}} class="" {{/ifCond}} href="/admin/products">Admin Products</a></li>
             </ul>
         </nav>
     </header>

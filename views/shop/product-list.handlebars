@@ -1,0 +1,29 @@
+<main>
+    {{#if hasProducts}}
+    <div class="grid">
+        {{#each prods}}
+        <article class="card product-item">
+            <header class="card__header">
+                <h1 class="product__title">
+                    {{this.title}}
+                </h1>
+                <div class="card__image">
+                    <img src="{{this.imageUrl}}" alt="{{this.title}}">
+                </div>
+                <div class="card__content">
+                    <h2 class="product__price">${{this.price}}</h2>
+                    <p class="product__description">{{this.description}}</p>
+                </div>
+                <div class="card__actions">
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </header>
+        </article>  
+        {{/each}}      
+    </div>
+    {{/if}}
+</main>
+
+
+
+<!--https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3Ob-0pmkFhPdOFC4YykH-14mbq5UK8VX9jhMbso0QKlIzB34f&s-->
