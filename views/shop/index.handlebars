@@ -15,13 +15,15 @@
                     <p class="product__description">{{this.description}}</p>
                 </div>
                 <div class="card__actions">
-                    <form action="/add-to-cart" method="POST">
-                        <button class="btn">Add to Cart</button>
+                    <a href="/products/{{this.id}}" class="btn">Details</a>
+                    <form action="/cart" method="post">
+                        <button type="submit" class="btn">Add to Cart</button>
+                        <input type="hidden" name="productId" value="{{this.id}}">
                     </form>
                 </div>
             </header>
-        </article>  
-        {{/each}}      
+        </article>
+        {{/each}}
     </div>
     {{/if}}
 </main>
