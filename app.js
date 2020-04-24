@@ -13,6 +13,8 @@ const app = express();
 const errorController = require('./controllers/error');
 const handlebars = require('handlebars');
 
+const db = require('./util/database');
+
 const fileStorage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'images');
@@ -22,6 +24,14 @@ const fileStorage = multer.diskStorage({
     }
     
 });
+
+// db.execute('select * from products')
+// .then(result=>{
+//     console.log(result);
+// })
+// .catch((err)=>{
+//     console.log(err);
+// });
 
 const fileFilter = (req, file, cb) => {
     if(file.mimetype === 'images/png' || file.mimetype === 'images/jpeg' || file.mimetype === 'images/jpg')

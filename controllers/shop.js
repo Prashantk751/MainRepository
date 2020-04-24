@@ -1,7 +1,7 @@
 const Product = require('../models/product');
 const Cart = require('../models/cart');
 
-exports.getProducts = (req,res,next)=>{
+exports.getProducts2 = (req,res,next)=>{
     // const products = Product.fetchAll();
     Product.fetchAll( products =>{
      res.render('shop/product-list',{
@@ -21,33 +21,88 @@ exports.getProducts = (req,res,next)=>{
      //res.render('shop', {prods: products, pageTitle:'shop'});
  };
 
- exports.getIndex = (req,res,next)=>{
-    // const products = Product.fetchAll();
-    Product.fetchAll( products =>{
-     res.render('shop/index',{
-         prods: products,
-         pageTitle:'shop',
-         path:'/',
-         hasProducts: products.length > 0,
-         activeShop: true,
-         productCSS: true
-     });   
-    });
+exports.getProducts = (req,res,next)=>{
+    Product.fetchAll()
+    .then(([rows, fieldData])=>{
+        res.render('shop/product-list',{
+            prods: rows,
+            pageTitle:'All Products',
+            path:'/products',
+            hasProducts: rows.length > 0,
+            activeShop: true,
+            productCSS: true
+        });   
+      
+    })
+    .catch( err=> console.log(err));
+    
+}
+
+//  exports.getIndex = (req,res,next)=>{
+//     Product.fetchAll( products =>{
+//      res.render('shop/index',{
+//          prods: products,
+//          pageTitle:'shop',
+//          path:'/',
+//          hasProducts: products.length > 0,
+//          activeShop: true,
+//          productCSS: true
+//      });   
+//     });
+   
+//  };
+
+
+exports.getIndex = (req,res,next)=>{
+    Product.fetchAll()
+    .then(([rows, fieldData])=>{
+        res.render('shop/index',{
+            prods: rows,
+            pageTitle:'shop',
+            path:'/',
+            hasProducts: rows.length > 0,
+            activeShop: true,
+            productCSS: true
+        });   
+      
+    })
+    .catch( err=> console.log(err));
+    
    
  };
 
- exports.getProductDetail = (req,res,next) => {
+//  exports.getProductDetail = (req,res,next) => {
+//     const prodId = req.params.productId;
+//     //console.log("Product id is:",prodId);
+    
+//     Product.findById(prodId, product =>{
+//         console.log(product);
+//         res.render('shop/product-detail', {
+//             product: product,
+//             pageTitle:'Product Detail',
+//             path:'/products'
+//         })
+//     })
+//     //res.redirect('/');
+//  };
+
+
+exports.getProductDetail = (req,res,next) => {
     const prodId = req.params.productId;
     //console.log("Product id is:",prodId);
     
-    Product.findById(prodId, product =>{
+    Product.findById(prodId)
+    .then(([product])=>{
         console.log(product);
         res.render('shop/product-detail', {
-            product: product,
+            product: product[0],
             pageTitle:'Product Detail',
             path:'/products'
-        })
+        });
     })
+    .catch(err =>{
+        console.log(err);
+    });
     //res.redirect('/');
  };
 
